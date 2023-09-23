@@ -54,11 +54,11 @@ app.post('/register', async (req, res)=>{
         }else{            
 			res.render('register', {
 				alert: true,
-				alertTitle: "Registration",
-				alertMessage: "¡Successful Registration!",
+				alertTitle: "Registro de Usuario",
+				alertMessage: "¡Bien Registrado Cabeza!",
 				alertIcon:'success',
 				showConfirmButton: false,
-				timer: 1500,
+				timer: 2000,
 				ruta: ''
 			});
             //res.redirect('/');         
@@ -98,14 +98,14 @@ app.post('/auth', async (req, res)=> {
 					alertMessage: "¡LOGIN CORRECTO!",
 					alertIcon:'success',
 					showConfirmButton: false,
-					timer: 1500,
+					timer: 2000,
 					ruta: ''
 				});        			
 			}			
 			res.end();
 		});
 	} else {	
-		res.send('Please enter user and Password!');
+		res.send('Por favor ingrese Usuario y Clave!');
 		res.end();
 	}
 });
@@ -120,7 +120,7 @@ app.get('/', (req, res)=> {
 	} else {
 		res.render('index',{
 			login:false,
-			name:'Debe iniciar sesión',			
+			name:'Hace bien las Cosas!! Debe iniciar sesión',			
 		});				
 	}
 	res.end();
@@ -144,5 +144,5 @@ app.get('/logout', function (req, res) {
 
 
 app.listen(3000, (req, res)=>{
-    console.log('SERVER RUNNING IN http://localhost:3000');
+    console.log('ANDA BIEN EL SERVIDOR VISTE!! http://localhost:3000');
 });
